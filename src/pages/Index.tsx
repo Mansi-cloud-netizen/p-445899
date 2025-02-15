@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { AudioUpload } from "@/components/speech/AudioUpload";
 import { AudioVisualizer } from "@/components/speech/AudioVisualizer";
 import { TranscriptionResult } from "@/components/speech/TranscriptionResult";
-import { Mic, Waveform } from "lucide-react";
+import { Mic, AudioLines } from "lucide-react";
 
 const Index = () => {
   const [audioFile, setAudioFile] = useState<File | null>(null);
@@ -28,7 +28,7 @@ const Index = () => {
             <Mic className="h-8 w-8 text-white" />
           </div>
           <div className="absolute right-1/4 top-0 animate-pulse opacity-50">
-            <Waveform className="h-8 w-8 text-white" />
+            <AudioLines className="h-8 w-8 text-white" />
           </div>
           <h1 className="text-4xl font-bold tracking-tight mb-2 text-white animate-fade-in">
             SPEECH TO TEXT
