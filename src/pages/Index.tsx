@@ -21,15 +21,39 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#1EAEDB]">
-      <main className="container mx-auto px-4 py-8">
-        <header className="text-center mb-8 relative">
-          <div className="absolute left-1/4 top-0 animate-bounce opacity-50">
-            <Mic className="h-8 w-8 text-white" />
-          </div>
-          <div className="absolute right-1/4 top-0 animate-pulse opacity-50">
-            <AudioLines className="h-8 w-8 text-white" />
-          </div>
+    <div className="min-h-screen bg-[#1EAEDB] relative overflow-hidden">
+      {/* Background Icons */}
+      <div className="absolute inset-0 pointer-events-none">
+        {/* Top Left */}
+        <div className="absolute top-[10%] left-[10%] animate-bounce opacity-30">
+          <Mic className="h-8 w-8 text-white" />
+        </div>
+        <div className="absolute top-[20%] left-[30%] animate-pulse opacity-20">
+          <AudioLines className="h-12 w-12 text-white" />
+        </div>
+        
+        {/* Top Right */}
+        <div className="absolute top-[15%] right-[15%] animate-bounce opacity-25">
+          <Mic className="h-10 w-10 text-white" />
+        </div>
+        <div className="absolute top-[35%] right-[25%] animate-pulse opacity-20">
+          <AudioLines className="h-8 w-8 text-white" />
+        </div>
+        
+        {/* Bottom Left */}
+        <div className="absolute bottom-[20%] left-[20%] animate-pulse opacity-30">
+          <AudioLines className="h-10 w-10 text-white" />
+        </div>
+        
+        {/* Bottom Right */}
+        <div className="absolute bottom-[25%] right-[15%] animate-bounce opacity-25">
+          <Mic className="h-8 w-8 text-white" />
+        </div>
+      </div>
+
+      {/* Main Content */}
+      <main className="container mx-auto px-4 py-8 relative z-10">
+        <header className="text-center mb-8">
           <h1 className="text-4xl font-bold tracking-tight mb-2 text-white animate-fade-in">
             SPEECH TO TEXT
           </h1>
